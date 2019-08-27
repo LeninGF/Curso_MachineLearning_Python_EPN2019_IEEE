@@ -10,6 +10,7 @@ Desarrollar una clase Perceptron que permite:
     * Función Sigmoide
     * Función Tanh
 5. Ejercicio Reto:
+
     a. Incrementar una nueva función de coste o de error
     b. Utilizando Matplotlib dibujar la evolución del error en función del número de épocas
 
