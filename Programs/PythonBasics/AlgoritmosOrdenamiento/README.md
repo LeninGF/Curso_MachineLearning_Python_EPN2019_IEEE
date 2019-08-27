@@ -9,6 +9,7 @@ Dado un arreglo aleatorio de **N** valores enteros, ordenar el arreglo.
 Mida el tiempo que le toma al algoritmo ordenar el arreglo y presente un impresión en consola del resultado
 
 **Nota:** importe la librería time con
+	
 	import time
 
 El tiempo antes de ejecutar el algoritmo de ordenamiento se puede guardar como
