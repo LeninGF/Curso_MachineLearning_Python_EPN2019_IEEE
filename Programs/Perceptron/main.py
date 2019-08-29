@@ -10,7 +10,15 @@ import numpy as np
 def signo(net):
     fsigno = [1. if elem >=0 else -1. for elem in net]
     return fsigno
-
+def paso(net):
+    fpaso = [1. if elem >= 0 else 0. for elem in net]
+    return fpaso
+def sigmoide(net):
+    fsigmoide=1/(1+np.exp(elem) for elem in net)
+    return fsigmoide
+def tanhip(net):
+    ftanhip=((np.exp(elem)-np.exp(-elem))/(np.exp(elem)+np.exp(-elem)) for elem in net )
+    return ftanhip
 def signo_escalar(net_escalar):
     y_pred = 1 if net_escalar >=0 else -1
     return y_pred
@@ -31,6 +39,11 @@ def funcion_error(y_verdadero, y_predicho):
         if y_i != y_verdadero[indice]:
             cont = cont+1
     return cont
+def predecir(x,w_new):
+    #Sacar la salida del perceptron para un x dado como deber
+    net_final=net(x_input=x,w=w_new)
+    y_final=signo_escalar(net_final)
+    return y_final
 
 #%% programa
 # Definiendo el dataset de entrada
@@ -100,5 +113,7 @@ while(epoca<Num_Max_Epocas):
     else:
         epoca += 1
         continue
-
+X_new=np.array([1,-1,-1],dtype=np.float)
 print('El modelo es: {}'.format(W_new))
+y_predicha=predecir(X_new,W_new)
+print('La y predicha es: {}'.format(y_predicha))
