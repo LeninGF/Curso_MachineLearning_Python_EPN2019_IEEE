@@ -20,11 +20,14 @@ class perceptron:
             arr.append(input())
         print(arr)
     def learn1(self):
-        return learn_rate=0.1
+        learn_rate = 0.1
+        return learn_rate
     def learn2(self):
-        return learn_rate=0.01
+        learn_rate = 0.01
+        return learn_rate
     def learn3(self):
-        return learn_rate=0.001
+        learn_rate = 0.001
+        return learn_rate
     def numbers_learn(self,argument):
         switcher = {
             0: self.learn1,
